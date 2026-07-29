@@ -45,7 +45,7 @@ def run_entry_report(data):
 def main():
     command = sys.argv[1] if len(sys.argv) > 1 else "summary"
 
-    player = "JenssieP_7"
+    player = "MrDirtyMustache"
     platform = "psn"
     platform_family = "console"
     season = "y11s2"

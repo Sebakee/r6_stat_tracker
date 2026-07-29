@@ -12,9 +12,9 @@ def calculate_entry_parts(first_bloods, first_deaths, kills, rounds):
     entry_involvement = opening_duels / rounds if rounds else 0
     kill_pressure = kills / rounds if rounds else 0
 
-    success_score = clamp(((entry_success - 0.35) / 0.30) * 100)
-    involvement_score = clamp((entry_involvement / 0.15) * 100)
-    kill_score = clamp((kill_pressure / 0.90) * 100)
+    success_score = clamp(((entry_success - 0.35) / 0.27) * 100)
+    involvement_score = clamp((entry_involvement / 0.25) * 100)
+    kill_score = clamp((kill_pressure / 1.25) * 100)
 
     entry_score = (
         success_score * 0.35
