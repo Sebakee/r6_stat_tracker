@@ -35,10 +35,8 @@ def get_full_stats(
     }
 
     for attempt in range(1, max_retries + 1):
-        print(f"Attempt {attempt}/{max_retries}...")
 
         response = requests.get(url, params=params, headers=headers, timeout=30)
-        print("Status code:", response.status_code)
 
         if response.status_code == 200:
             return response.json()
