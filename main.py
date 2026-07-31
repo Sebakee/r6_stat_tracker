@@ -45,9 +45,12 @@ def run_entry_report(data):
 def main():
     command = sys.argv[1] if len(sys.argv) > 1 else "summary"
 
-    player = "MrDirtyMustache"
-    platform = "psn"
-    platform_family = "console"
+    player = input("In game name: ")
+    platform = input("Platform (psn/xbl/uplay)")
+    if platform == "uplay":
+        platform_family = "pc"
+    else:
+        platform_family = "console"
     season = "y11s2"
 
     data = get_full_stats(
