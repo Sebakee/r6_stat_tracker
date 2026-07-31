@@ -59,7 +59,12 @@ R6DATA_API_KEY=your_api_key_here
 python .\main.py summary
 ```
 
-This generates reports in the `output/` folder, including:
+The script will prompt you for:
+
+- your in-game name
+- your platform (`psn`, `xbl`, or `uplay`)
+
+It then generates reports in the `output/` folder, including:
 
 - full stats export
 - operator summary
@@ -71,17 +76,26 @@ This generates reports in the `output/` folder, including:
 python .\main.py entry
 ```
 
-This prints an entry-focused performance report in the terminal.
+This prints an entry-focused performance report in the terminal after the same prompts.
+
+### Try it without your own account
+
+If you just want to see how the program works, you can use my pc account:
+
+- player name: `sebakee`
+- platform: `uplay`
+
+This will let you explore the output format even if you do not have your own Rainbow Six account.
 
 ## Platform Settings
 
-The script currently uses these default values in `main.py`:
+The script asks for the platform when you run it:
 
-- PlayStation: `platform = "psn"`, `platform_family = "console"`
-- Xbox: `platform = "xbl"`, `platform_family = "console"`
-- PC: `platform = "uplay"`, `platform_family = "pc"`
+- PlayStation: `psn`
+- Xbox: `xbl`
+- PC: `uplay`
 
-You can change these values to analyze a different account.
+The program automatically maps `uplay` to the PC platform family and uses the console family for `psn` and `xbl`.
 
 ## Entry Performance Score
 
